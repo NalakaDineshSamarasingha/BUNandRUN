@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node index.js",  // Adjusted for running in production
     "dev": "nodemon index.js", // Development script, optional
-    "build": "echo 'No build step needed for Node.js app'" // Placeholder for build step
+    "build": "npm i" // Placeholder for build step
   },
   "dependencies": {
     "ejs": "^3.1.10",
