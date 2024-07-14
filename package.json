@@ -3,20 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",  // Adjusted for running in production
-    "dev": "nodemon index.js", // Development script, optional
-    "build": "npm i" // Placeholder for build step
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "build": "npm i"
   },
+  "author": "",
+  "license": "ISC",
+  "description": "",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^4.19.2"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.3" // Development dependency, optional
-  },
-  "engines": {
-    "node": ">=12.0.0" // Specify the version of Node.js your app requires
-  },
-  "license": "ISC",
-  "description": "Your project description here"
+    "express": "^4.19.2",
+    "nodemon": "^3.1.3"
+  }
 }
