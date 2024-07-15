@@ -14,9 +14,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Route handler for rendering the index page
-// app.get('/', (req, res) => {
-//     res.render('index', { data: {} }); // Initial rendering without data
-// });
+app.get('/', (req, res) => {
+    res.send("Hello World"); // Initial rendering without data
+});
 
 // Route handler for processing QR code data
 app.get('/calculate', (req, res) => {
