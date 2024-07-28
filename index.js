@@ -2,22 +2,21 @@
 
 const express = require('express');
 const app = express();
+require('dotenv').config();
+const axios = require('axios');
 const port = 3000;
 
-// Set EJS as the view engine
+
 app.set('view engine', 'ejs');
 
-// Middleware to parse URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
+
+app.use(express.json());
 
 // Serve static files (optional)
 app.use(express.static('public'));
 
-// Route handler for rendering the index page
-app.get('/', (req, res) => {
-    res.send("Hello World"); // Initial rendering without data
-});
-
+// Route handler for rendering the index pag
 // Route handler for processing QR code data
 app.get('/calculate', (req, res) => {
     // Extract parameters from the query string
@@ -50,6 +49,11 @@ app.get('/calculate', (req, res) => {
         }
     });
 });
+
+
+app.get('/success', () => {
+    console.log("Notify");
+})
 
 // Start the server
 app.listen(port, () => {
